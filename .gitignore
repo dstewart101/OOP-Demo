@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/OOP-Demo
+/OOP-Demo/bin/Debug/netcoreapp2.1
+/OOP-Demo/obj/Debug/netcoreapp2.1
+/OOP-Demo/obj
+/Arrays/obj
