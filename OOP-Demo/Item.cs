@@ -10,6 +10,12 @@ namespace OOP_Demo
         {
             Console.WriteLine("Purchasing {0}", Name);
         }
+
+        public static Item GetItem()
+        {
+            var newItem = new Item() { Id = 1234, Name = "Brand New Item" };
+            return newItem;
+        }
     }
 
     public class Software : Item

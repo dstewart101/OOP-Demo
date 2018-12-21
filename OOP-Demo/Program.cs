@@ -31,6 +31,8 @@ namespace OOP_Demo
             mySoftware.Name = "VS2010";
             mySoftware.Purchase();
 
+            Item freshItem = Item.GetItem();
+            freshItem.Purchase();
         }
     }
 }
