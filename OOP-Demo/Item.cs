@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OOP_Demo
 {
@@ -11,10 +12,20 @@ namespace OOP_Demo
             Console.WriteLine("Purchasing {0}", Name);
         }
 
-        public static Item GetItem()
+        public static List<Item> GetItems(int numToGet)
         {
-            var newItem = new Item() { Id = 1234, Name = "Brand New Item" };
-            return newItem;
+            var random = new Random();
+
+            List<Item> newList = new List<Item>();
+            Item newItem;
+
+            for (int i = 0; i < numToGet; i++)
+            {
+                newItem = new Item { Id = random.Next(), Name = "MyItem" + i.ToString() };
+                newList.Add(newItem);
+            }
+
+            return newList;
         }
     }
 

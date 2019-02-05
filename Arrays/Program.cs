@@ -13,6 +13,25 @@ namespace Arrays
             {
                 items[i] = new Item(r.Next());
             }
+
+            foreach (Item item in items)
+            {
+                Console.WriteLine("item id is " + item.Id);
+            }
+
+            Item myItem = items[1];
+            Console.WriteLine("ID of second item = {0}", myItem.Id);
+
+            Console.WriteLine("");
+
+            Array.Sort(items, delegate(Item item1, Item item2) {
+                return item1.Id.CompareTo(item2.Id);
+            });
+
+            foreach (Item item in items)
+            {
+                Console.WriteLine("item id is " + item.Id);
+            }
         }
     }
 }
